@@ -1,0 +1,94 @@
+﻿<Page
+    x:Class="Ejemplo.Shell"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Ejemplo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:Ejemplo.ViewModel"
+    mc:Ignorable="d">
+
+    <Page.DataContext>
+        <vm:ShellViewModel />
+    </Page.DataContext>
+    
+    <Grid>
+        <SplitView x:Name="MySplitView"
+                   IsPaneOpen="False"
+                   CompactPaneLength="40"
+                   OpenPaneLength="200"
+                   PaneBackground="{StaticResource SombraDeGray}"
+                   DisplayMode="CompactInline">
+            <SplitView.Pane>
+                <Grid x:Name="SplitViewPane"
+                      Background="{StaticResource SombraDeGray}">
+                    <ListView ItemsSource="{Binding Menu}"
+                              SelectionChanged="Menu_SelectionChanged"
+                              Margin="0 48 0 0"
+                              VerticalAlignment="Top">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <FontIcon x:Name="Glyph"
+                                              Glyph="{Binding Glyph}"
+                                              VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"
+                                              Foreground="White"
+                                              ToolTipService.ToolTip="{Binding Text}" />
+                                    <TextBlock Text="{Binding Text}"
+                                               Margin="8 0 0 0"
+                                               Foreground="White" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                    <!-- Logo -->
+                    <Viewbox x:Name="Logo"                             
+                             Margin="4"
+                             HorizontalAlignment="Center"
+                             VerticalAlignment="Bottom"
+                             Width="142">
+                        <Image Source="Assets/Square150x150Logo.scale-200.png" Stretch="UniformToFill"/>
+                    </Viewbox>
+                </Grid>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Grid>
+                    <!-- Navigation Frame -->
+                    <Frame x:Name="SplitViewFrame">
+                        <Frame.ContentTransitions>
+                            <TransitionCollection>
+                                <NavigationThemeTransition>
+                                    <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                                        <EntranceNavigationTransitionInfo />
+                                    </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                                </NavigationThemeTransition>
+                            </TransitionCollection>
+                        </Frame.ContentTransitions>
+                    </Frame>
+
+                    <!-- SplitViewOpener -->
+                    <Grid ManipulationMode="TranslateX"                          
+                          Width="200"
+                          Background="Transparent"
+                          HorizontalAlignment="Left"
+                          VerticalAlignment="Stretch">
+                    </Grid>
+                </Grid>
+            </SplitView.Content>
+        </SplitView>
+
+        <!-- Hamburger Button -->
+        <Button x:Name="HamburgerButton"
+                FontFamily="Segoe MDL2 Assets"
+                Content="&#xE700;"
+                Width="40"
+                Height="40"
+                Background="Transparent"
+                Foreground="{ThemeResource SystemControlForegroundBaseMediumBrush}"
+                VerticalAlignment="Top"
+                BorderThickness="0"
+                Click="HamburgerButton_Click" />
+    </Grid>
+</Page>

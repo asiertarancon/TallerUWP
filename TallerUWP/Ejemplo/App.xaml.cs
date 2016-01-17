@@ -40,12 +40,12 @@ namespace Ejemplo
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
 
-#if DEBUG
-            if (System.Diagnostics.Debugger.IsAttached)
-            {
-                this.DebugSettings.EnableFrameRateCounter = true;
-            }
-#endif
+//#if DEBUG
+//            if (System.Diagnostics.Debugger.IsAttached)
+//            {
+//                this.DebugSettings.EnableFrameRateCounter = true;
+//            }
+//#endif
 
             Frame rootFrame = Window.Current.Content as Frame;
 
@@ -72,7 +72,7 @@ namespace Ejemplo
                 // Cuando no se restaura la pila de navegación, navegar a la primera página,
                 // configurando la nueva página pasándole la información requerida como
                 //parámetro de navegación
-                rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                rootFrame.Navigate(typeof(Shell), e.Arguments);
             }
             // Asegurarse de que la ventana actual está activa.
             Window.Current.Activate();
