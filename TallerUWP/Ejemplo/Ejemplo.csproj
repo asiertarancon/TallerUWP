@@ -105,6 +105,9 @@
     <Compile Include="Ejercicio3.xaml.cs">
       <DependentUpon>Ejercicio3.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ejercicio4.xaml.cs">
+      <DependentUpon>Ejercicio4.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Mvvm\BindableBase.cs" />
     <Compile Include="Mvvm\DelegateCommand.cs" />
     <Compile Include="Mvvm\ViewModelBase.cs" />
@@ -122,6 +125,7 @@
     <None Include="Ejemplo_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\LogoUR.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

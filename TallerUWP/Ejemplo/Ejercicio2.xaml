@@ -6,8 +6,63 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    
     mc:Ignorable="d">
-    
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Text="{Binding TieneGPS}"/>
+        <!--<TextBlock Text="Edición de Cliente"/>
+        <Image Source="Assets/StoreLogo.png"/>
+        <TextBlock Text="Asier Tarancón"/>
+        <TextBlock Text="Taller UWP"/>
+
+        <TextBlock Text="Nombre: "/>
+        <TextBox Text=""/>
+        <TextBlock Text="Apellidos: "/>
+        <TextBox Text=""/>
+        <TextBlock Text="Vip: "/>
+        <CheckBox IsChecked="False"/>-->
+
+        <TextBlock Text="Edición de Cliente" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image Source="Assets/LogoUR.jpg" HorizontalAlignment="Right" VerticalAlignment="Top" Width="200"/>
+        <TextBlock Text="Asier Tarancón" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource SubheaderTextBlockStyle}"/>
+        <TextBlock Text="Taller UWP" HorizontalAlignment="Left" VerticalAlignment="Bottom" Style="{StaticResource SubheaderTextBlockStyle}"/>
+
+        <RelativePanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Height="300" >
+            <Grid Margin="20" x:Name="FormDatosGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" x:Name="NombreTextBlock" Text="Nombre: " />
+                <TextBox Grid.Row="0" Grid.Column="1"  Margin="10,0,0,0" Text="" />
+
+                <TextBlock Grid.Row="2" Grid.Column="0"  x:Name="ApellidosTextBlock" Text="Apellidos: "/>
+                <TextBox Grid.Row="2"  Grid.Column="1"  Margin="10,0,0,0" Text="" />
+
+                <TextBlock Grid.Row="4"  Grid.Column="0" x:Name="VipTextBlock" Text="Vip: "/>
+                <CheckBox Grid.Row="4"  Grid.Column="1" IsChecked="False"/>
+
+            </Grid>
+
+            <Viewbox x:Name="PhotoViewBox" RelativePanel.RightOf="FormDatosGrid">
+                <Grid>
+                    <Grid Name="backgroundGrid" Width="256" Height="256" Visibility="Collapsed" />
+                    <Path Data="M15.827007,0C20.406003,0 24.346007,3.1960449 24.346007,9.2930298 24.346007,13.259033 22.542005,17.289001 20.180997,19.791992L20.193005,19.791992C19.287,22.627014 20.736997,23.299011 20.966,23.376038 25.997008,25.090027 31.651002,28.317993 31.651002,31.626038L31.651002,32 0,32 0,31.626038C8.034749E-08,28.414001 5.6260008,25.161011 10.421,23.376038 10.766993,23.244995 12.422999,22.317017 11.497004,19.817993 9.1220035,17.321045 7.3279971,13.275024 7.3279971,9.2930298 7.3279971,3.1960449 11.245006,0 15.827007,0z" 
+                          Stretch="Uniform" Fill="#FF505050" Width="138" Height="138" />
+                </Grid>
+            </Viewbox>
+
+        </RelativePanel>
+
+
+        
+
     </Grid>
 </Page>
