@@ -16,6 +16,6 @@
             <PivotItem Header="4 cabecera larga"></PivotItem>
             <PivotItem Header="5 cabecera larga"></PivotItem>
         </Pivot>
-        
+         
     </Grid>
 </Page>
