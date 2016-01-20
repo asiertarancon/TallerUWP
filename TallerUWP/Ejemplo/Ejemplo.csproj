@@ -95,6 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CommandVoice\TallerVoiceCommandService.cs" />
     <Compile Include="Common\MenuItem.cs" />
     <Compile Include="Ejercicio1.xaml.cs">
       <DependentUpon>Ejercicio1.xaml</DependentUpon>
@@ -107,6 +108,9 @@
     </Compile>
     <Compile Include="Ejercicio4.xaml.cs">
       <DependentUpon>Ejercicio4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicio5.xaml.cs">
+      <DependentUpon>Ejercicio5.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mvvm\BindableBase.cs" />
     <Compile Include="Mvvm\DelegateCommand.cs" />
@@ -126,6 +130,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\LogoUR.jpg" />
+    <Content Include="TallerUWP.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -156,11 +163,16 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Ejercicio5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Shell.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

@@ -7,6 +7,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -37,7 +38,7 @@ namespace Ejemplo
         /// de entrada cuando la aplicación se inicie para abrir un archivo específico, por ejemplo.
         /// </summary>
         /// <param name="e">Información detallada acerca de la solicitud y el proceso de inicio.</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
+        protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
 
 //#if DEBUG
@@ -76,6 +77,13 @@ namespace Ejemplo
             }
             // Asegurarse de que la ventana actual está activa.
             Window.Current.Activate();
+
+            // Install the main VCD. Since there's no simple way to test that the VCD has been imported, or that it's your most recent
+            // version, it's not unreasonable to do this upon app load.
+            StorageFile vcdStorageFile = await Package.Current.InstalledLocation.GetFileAsync(@"TallerUWP.xml");
+
+            await Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager.InstallCommandDefinitionsFromStorageFileAsync(vcdStorageFile);
+
         }
 
         /// <summary>

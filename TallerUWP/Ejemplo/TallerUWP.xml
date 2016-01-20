@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="TallerCommandSet_en-us">
+    <AppName> Workshop Universal Applications </AppName>
+    <Example> Show exercise 3 from Workshop </Example>
+
+    <Command Name="mostrarEjercicioTaller">
+      <Example> Taller mostrar ejercicio 2 </Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> show [the] exercise {destination} </ListenFor>
+      <ListenFor RequireAppName="ExplicitlySpecified"> show [the] exercise {destination} from {builtin:AppName} </ListenFor>
+      <Feedback> Showing exercise {destination} </Feedback>
+      <Navigate />
+    </Command>
+
+    <PhraseList Label="destination">
+      <Item>One</Item>
+      <Item>Two</Item>
+      <Item>Three</Item>
+      <Item>Four</Item>
+    </PhraseList>
+  </CommandSet>
+
+  <CommandSet xml:lang="es-es" Name="TallerCommandSet_es-es">
+    <AppName> Taller Aplicaciones Universales </AppName>
+    <Example> Mostrar ejercicio 2 del taller </Example>
+
+    <Command Name="mostrarEjercicioTaller">
+      <Example> Mostrar el ejercicio 2 del taller </Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> mostrar [el] ejercicio {destination}</ListenFor>
+      <ListenFor RequireAppName="ExplicitlySpecified"> mostrar [el] ejercicio {destination} del {builtin:AppName} </ListenFor>
+      <Feedback> Mostrando ejercicio {destination}</Feedback>
+      <Navigate Target="foo"/>
+    </Command>
+
+    <PhraseList Label="destination">
+      <Item>Uno</Item>
+      <Item>Dos</Item>
+      <Item>Tres</Item>
+      <Item>Cuatro</Item>
+    </PhraseList>
+  </CommandSet>
+
+   
+</VoiceCommands>
