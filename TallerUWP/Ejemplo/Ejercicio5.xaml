@@ -28,8 +28,10 @@
                 </ListBox.ItemTemplate>
             </ListBox>
 
-            <Button Content="Send a mail" Command="{Binding SendMailCommand}" Margin="0,10,0,0"/>
-            <Button Content="Go To Map" Command="{Binding GoToMapCommand}" Margin="0,10,0,0"/>
+            <Button Content="Enviar un mail" Margin="0,10,0,0" Command="{Binding SendMailCommand}" CommandParameter="{Binding ElementName=AsuntoTextBox, Path=Text}"/>
+            <TextBox x:Name="AsuntoTextBox"  Header="Asunto del mail" />
+            <TextBox Header="Cuerpo del mail" Text="{Binding BodyMail, Mode=TwoWay}"/>
+            <Button Content="Ir al Mapa" Command="{Binding GoToMapCommand}" Margin="0,10,0,0"/>
         </StackPanel>
         
     </Grid>

@@ -112,6 +112,9 @@
     <Compile Include="Ejercicio5.xaml.cs">
       <DependentUpon>Ejercicio5.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ejercicio6.xaml.cs">
+      <DependentUpon>Ejercicio6.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Mvvm\BindableBase.cs" />
     <Compile Include="Mvvm\DelegateCommand.cs" />
     <Compile Include="Mvvm\ViewModelBase.cs" />
@@ -165,6 +168,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Ejercicio5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ejercicio6.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
