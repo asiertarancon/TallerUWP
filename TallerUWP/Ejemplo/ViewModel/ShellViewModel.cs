@@ -17,6 +17,8 @@ namespace Ejemplo.ViewModel
             Menu.Add(new MenuItem() { Glyph = "", Text = "Ejercicio 2. Controles", NavigationDestination = typeof(Ejercicio2) });
             Menu.Add(new MenuItem() { Glyph = "", Text = "Ejercicio 3. Visual States", NavigationDestination = typeof(Ejercicio3) });
             Menu.Add(new MenuItem() { Glyph = "", Text = "Ejercicio 4. Pivot", NavigationDestination = typeof(Ejercicio4) });
+
+            Menu.Add(new MenuItem() { Glyph = "", Text = "Ejercicio 5. Selectores", NavigationDestination = typeof(Ejercicio5) });
         }
     }
 }

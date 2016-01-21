@@ -6,7 +6,7 @@
     using System.Windows.Input;
     using Windows.UI.Xaml.Input;
 
-    internal class DelegateCommand : ICommand
+    public class DelegateCommand : ICommand
     {
         private readonly Action _execute;
 

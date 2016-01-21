@@ -5,9 +5,32 @@
     xmlns:local="using:Ejemplo"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:Ejemplo.ViewModel"
     mc:Ignorable="d">
 
+    <Page.DataContext>
+        <vm:Ejercicio5ViewModel />
+    </Page.DataContext>
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Margin="100">
+            <Button Content="Selecciona un contacto" Command="{Binding SelectContactCommand}"/>
+            <TextBlock Text="{Binding ContactSelected.DisplayName}"/>
+            <Button Content="Seleccione varios contactos" Command="{Binding ListSelectContactCommand}"/>
+            <ListBox ItemsSource="{Binding ListContactSelected}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="{Binding SmallDisplayPicture}"/>
+                            <TextBlock Margin="10" Text="{Binding DisplayName}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
 
+            <Button Content="Send a mail" Command="{Binding SendMailCommand}" Margin="0,10,0,0"/>
+            <Button Content="Go To Map" Command="{Binding GoToMapCommand}" Margin="0,10,0,0"/>
+        </StackPanel>
+        
     </Grid>
 </Page>
