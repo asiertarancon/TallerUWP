@@ -112,9 +112,13 @@
     <Compile Include="Ejercicio5.xaml.cs">
       <DependentUpon>Ejercicio5.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Ejercicio6.xaml.cs">
-      <DependentUpon>Ejercicio6.xaml</DependentUpon>
+    <Compile Include="Ejercicio6a.xaml.cs">
+      <DependentUpon>Ejercicio6a.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ejercicio6b.xaml.cs">
+      <DependentUpon>Ejercicio6b.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Live Tiles\TilesHelper.cs" />
     <Compile Include="Mvvm\BindableBase.cs" />
     <Compile Include="Mvvm\DelegateCommand.cs" />
     <Compile Include="Mvvm\ViewModelBase.cs" />
@@ -133,7 +137,21 @@
     <None Include="Ejemplo_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Logo284.png" />
+    <Content Include="Assets\Logo284.scale-100.png" />
+    <Content Include="Assets\Logo284.scale-400.png" />
     <Content Include="Assets\LogoUR.jpg" />
+    <Content Include="Assets\Photos\1.jpg" />
+    <Content Include="Assets\Photos\2.jpg" />
+    <Content Include="Assets\Photos\3.jpg" />
+    <Content Include="Assets\Photos\4.jpg" />
+    <Content Include="Assets\Photos\5.jpg" />
+    <Content Include="Assets\Photos\6.jpg" />
+    <Content Include="Assets\Photos\7.jpg" />
+    <Content Include="Assets\Photos\8.jpg" />
+    <Content Include="Assets\Photos\9.jpg" />
+    <Content Include="Logo71.scale-100.png" />
+    <Content Include="Logo71.scale-400.png" />
     <Content Include="TallerUWP.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -171,7 +189,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Ejercicio6.xaml">
+    <Page Include="Ejercicio6a.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ejercicio6b.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -180,9 +202,7 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Live Tiles\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

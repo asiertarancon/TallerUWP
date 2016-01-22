@@ -16,7 +16,7 @@
         <SplitView x:Name="MySplitView"
                    IsPaneOpen="False"
                    CompactPaneLength="40"
-                   OpenPaneLength="200"
+                   OpenPaneLength="400"
                    PaneBackground="{StaticResource SombraDeGray}"
                    DisplayMode="CompactInline">
             <SplitView.Pane>
