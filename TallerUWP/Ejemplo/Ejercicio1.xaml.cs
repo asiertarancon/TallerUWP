@@ -54,7 +54,7 @@ namespace Ejemplo
             }
 
             string arguments = toastArgs.UserInput["message"] as string;
-           
+
             HelloTextBlock.Text = "HELLO " + arguments;
 
 

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
   <CommandSet xml:lang="en-us" Name="TallerCommandSet_en-us">
-    <AppName> Workshop Universal Applications </AppName>
+    <AppName> Workshop</AppName>
     <Example> Show exercise 3 from Workshop </Example>
 
     <Command Name="mostrarEjercicioTaller">
@@ -9,7 +9,7 @@
       <ListenFor RequireAppName="BeforeOrAfterPhrase"> show [the] exercise {destination} </ListenFor>
       <ListenFor RequireAppName="ExplicitlySpecified"> show [the] exercise {destination} from {builtin:AppName} </ListenFor>
       <Feedback> Showing exercise {destination} </Feedback>
-      <Navigate />
+      <Navigate Target="foo"/>
     </Command>
 
     <PhraseList Label="destination">
@@ -21,7 +21,7 @@
   </CommandSet>
 
   <CommandSet xml:lang="es-es" Name="TallerCommandSet_es-es">
-    <AppName> Taller Aplicaciones Universales </AppName>
+    <AppName>Taller</AppName>
     <Example> Mostrar ejercicio 2 del taller </Example>
 
     <Command Name="mostrarEjercicioTaller">
