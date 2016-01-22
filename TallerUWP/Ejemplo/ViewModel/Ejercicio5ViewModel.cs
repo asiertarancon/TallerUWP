@@ -12,7 +12,7 @@ namespace Ejemplo.ViewModel
 {
     public class Ejercicio5ViewModel : ViewModelBase
     {
-        #region Select Contact
+        #region Ejercicio5a
         private DelegateCommand _selectContactCommand;
         public DelegateCommand SelectContactCommand
         {
@@ -36,7 +36,7 @@ namespace Ejemplo.ViewModel
         }
         #endregion
 
-        #region Select Contact List
+        #region Ejercicio 5b
         private DelegateCommand _listSelectContactCommand;
         public DelegateCommand ListSelectContactCommand
         {
@@ -57,30 +57,8 @@ namespace Ejemplo.ViewModel
             set { SetProperty(ref _listContact, value); }
         }
         #endregion
-
-        #region Go To Map
-
-        private DelegateCommand _goToMapCommand;
-        public DelegateCommand GoToMapCommand
-        {
-            get { return _goToMapCommand ?? (_goToMapCommand = new DelegateCommand(GoToMap)); }
-            set { SetProperty(ref _goToMapCommand, value); }
-        }
-
-        private async void GoToMap()
-        {
-            // Center on New York City
-            var uriNewYork = new Uri(@"bingmaps:?collection=point.36.116584_-115.176753_Caesars%20Palace");
-
-            // Launch the Windows Maps app
-            var launcherOptions = new Windows.System.LauncherOptions();
-            launcherOptions.TargetApplicationPackageFamilyName = "Microsoft.WindowsMaps_8wekyb3d8bbwe";
-            var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherOptions);
-        }
-
-        #endregion
-
-        #region SendMail
+        
+        #region Ejercicio5c
 
         private DelegateCommand<string> _sendMailCommand;
         public DelegateCommand<string> SendMailCommand
@@ -115,6 +93,28 @@ namespace Ejemplo.ViewModel
         {
             get { return _bodyMail; }
             set { SetProperty(ref _bodyMail, value); }
+        }
+
+        #endregion
+
+        #region Ejercicio5d
+
+        private DelegateCommand _goToMapCommand;
+        public DelegateCommand GoToMapCommand
+        {
+            get { return _goToMapCommand ?? (_goToMapCommand = new DelegateCommand(GoToMap)); }
+            set { SetProperty(ref _goToMapCommand, value); }
+        }
+
+        private async void GoToMap()
+        {
+            // Center on New York City
+            var uriNewYork = new Uri(@"bingmaps:?collection=point.36.116584_-115.176753_Caesars%20Palace");
+
+            // Launch the Windows Maps app
+            var launcherOptions = new Windows.System.LauncherOptions();
+            launcherOptions.TargetApplicationPackageFamilyName = "Microsoft.WindowsMaps_8wekyb3d8bbwe";
+            var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherOptions);
         }
 
         #endregion
