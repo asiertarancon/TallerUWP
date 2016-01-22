@@ -176,7 +176,7 @@
         #endregion
 ### Ejercicio 6a - 2
 #### XAML
-    <Button x:Name="BorraBadgeButton" Content="Borra el Badge del Tile principal" Click="BorraBadgeButton_Click" Margin="0,20,0,0"/>
+    <Button x:Name="CreaLiveTileSecundarioButton" Content="Crea un Live Tile Secundario" Click="CreaLiveTileSecundarioButton_Click" Margin="0,20,0,0"/> 
 #### XAML.CS
     #region Ejercicio 6a - 2
         private static readonly string SECONDARY_TILE_ID = "badge";
@@ -193,8 +193,9 @@
         #endregion
 
 ### Ejercicio 6a - 3
-#### XAML             
-     <Button x:Name="CreaLiveTileSecundarioButton" Content="Crea un Live Tile Secundario" Click="CreaLiveTileSecundarioButton_Click" Margin="0,20,0,0"/>
+#### XAML         
+	<Button x:Name="BorraBadgeButton" Content="Borra el Badge del Tile principal" Click="BorraBadgeButton_Click" Margin="0,20,0,0"/>    
+    
 #### XAML.CS
         #region Ejercicio 6a - 3
         private void BorraBadgeButton_Click(object sender, RoutedEventArgs e)
