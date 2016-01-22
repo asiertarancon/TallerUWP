@@ -9,7 +9,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Hello UWP" Style="{StaticResource HeaderTextBlockStyle}"/>
+            <TextBlock x:Name="HelloTextBlock" Text="Hello UWP" Style="{StaticResource HeaderTextBlockStyle}"/>
             <TextBlock x:Name="FamilyTextBlock" Style="{StaticResource HeaderTextBlockStyle}"/>
         </StackPanel>
     </Grid>

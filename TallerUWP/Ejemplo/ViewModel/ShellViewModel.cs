@@ -20,7 +20,8 @@ namespace Ejemplo.ViewModel
 
             Menu.Add(new MenuItem() { Glyph = "", Text = "Ejercicio 5. Selectores", NavigationDestination = typeof(Ejercicio5) });
             Menu.Add(new MenuItem() { Glyph = "", Text = "Ejercicio 6a. Live Tiles - Badges", NavigationDestination = typeof(Ejercicio6a) });
-            Menu.Add(new MenuItem() { Glyph = "", Text = "Ejercicio 6a. Live Tiles - Primary And Secondary", NavigationDestination = typeof(Ejercicio6b) });
+            Menu.Add(new MenuItem() { Glyph = "", Text = "Ejercicio 6b. Live Tiles - Primary And Secondary", NavigationDestination = typeof(Ejercicio6b) });
+            Menu.Add(new MenuItem() { Glyph = "", Text = "Ejercicio 7a. Toast - Generic", NavigationDestination = typeof(Ejercicio7a) });
         }
     }
 }

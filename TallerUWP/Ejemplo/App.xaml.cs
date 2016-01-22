@@ -33,6 +33,9 @@ namespace Ejemplo
             this.Suspending += OnSuspending;
         }
 
+        public static LaunchActivatedEventArgs LaunchedEventArgs;
+        public static IActivatedEventArgs ActivatedEventArgs;
+
         /// <summary>
         /// Se invoca cuando el usuario final inicia la aplicación normalmente. Se usarán otros puntos
         /// de entrada cuando la aplicación se inicie para abrir un archivo específico, por ejemplo.
@@ -41,13 +44,17 @@ namespace Ejemplo
         protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
 
-//#if DEBUG
-//            if (System.Diagnostics.Debugger.IsAttached)
-//            {
-//                this.DebugSettings.EnableFrameRateCounter = true;
-//            }
-//#endif
-
+            //#if DEBUG
+            //            if (System.Diagnostics.Debugger.IsAttached)
+            //            {
+            //                this.DebugSettings.EnableFrameRateCounter = true;
+            //            }
+            //#endif
+            LaunchedEventArgs = e;
+            Initialize(e);
+        }
+        private async void Initialize(IActivatedEventArgs e)
+        {
             Frame rootFrame = Window.Current.Content as Frame;
 
             // No repetir la inicialización de la aplicación si la ventana tiene contenido todavía,
@@ -73,7 +80,7 @@ namespace Ejemplo
                 // Cuando no se restaura la pila de navegación, navegar a la primera página,
                 // configurando la nueva página pasándole la información requerida como
                 //parámetro de navegación
-                rootFrame.Navigate(typeof(Shell), e.Arguments);
+                rootFrame.Navigate(typeof(Shell));
             }
             // Asegurarse de que la ventana actual está activa.
             Window.Current.Activate();
@@ -108,6 +115,22 @@ namespace Ejemplo
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Guardar el estado de la aplicación y detener toda actividad en segundo plano
             deferral.Complete();
+        }
+
+        /// <summary>
+        /// If the app is closed and something triggers foreground activation, OnLaunched isn't even executed, only OnActivated is executed.
+        /// </summary>
+        /// <param name="args"></param>
+        protected override void OnActivated(IActivatedEventArgs args)
+        {
+            ActivatedEventArgs = args;
+
+            //if (Activated != null)
+            //{
+            //    Activated(this, args);
+            //}
+
+            Initialize(args);
         }
     }
 }
