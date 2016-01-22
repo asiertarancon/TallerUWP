@@ -34,102 +34,15 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <ScrollViewer Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-            <StackPanel Margin="24" >
+              <StackPanel Margin="24" >
 
+               
 
-                <TextBox
-                x:Name="TextBoxDisplayName"
-                Header="Nombre a mostrar"
-                Text="Taller UWP"/>
-
-                <CheckBox
-                x:Name="CheckBoxSquare71x71Logo"
-                Content="Usa Square71x71Logo"/>
-
-                <Border Style="{StaticResource BorderTileStyle}">
-                    <Image
-                    Style="{StaticResource ImageTileStyle}"
-                    Source="ms-appx:///Assets/DefaultSecondaryTileAssests/Small.png"/>
-                </Border>
-
-                <CheckBox
-                x:Name="CheckBoxSquare150x150Logo"
-                Content="Usa Square150x150Logo"
-                IsChecked="True"/>
-
-                <Border Style="{StaticResource BorderTileStyle}">
-                    <Image
-                    Style="{StaticResource ImageTileStyle}"
-                    Source="ms-appx:///Assets/DefaultSecondaryTileAssests/Medium.png"/>
-                </Border>
-
-                <CheckBox
-                x:Name="CheckBoxWide310x150Logo"
-                Content="Usa Wide310x150Logo"/>
-
-                <Border Style="{StaticResource BorderTileWideStyle}">
-                    <Image
-                    Style="{StaticResource ImageTileStyle}"
-                    Source="ms-appx:///Assets/DefaultSecondaryTileAssests/Wide.png"/>
-                </Border>
-
-                <CheckBox
-                x:Name="CheckBoxSquare310x310Logo"
-                Content="Usa Square310x310Logo"/>
-
-                <Border Style="{StaticResource BorderTileStyle}">
-                    <Image
-                    Style="{StaticResource ImageTileStyle}"
-                    Source="ms-appx:///Assets/DefaultSecondaryTileAssests/Large.png"/>
-                </Border>
-
-                <CheckBox
-                    x:Name="CheckBoxShowNameOnSquare150x150Logo"
-                    Content="Muestra el nombre en Square150x150Logo"/>
-
-                <CheckBox
-                    x:Name="CheckBoxShowNameOnWide310x150Logo"
-                    Content="Muestra el nombre en Wide310x150Logo"/>
-
-                <CheckBox
-                    x:Name="CheckBoxShowNameOnSquare310x310Logo"
-                    Content="Muestra el nombre en Square310x310Logo"/>
-
-
-                <Button
-                    x:Name="ButtonPin"
-                    Content="6.b.1 Click para anclar Tile secundario"
-                    HorizontalAlignment="Stretch"
-                    Click="ButtonPin_Click"
-                    Margin="0,12,0,0"/>
-
-                <Button
-                    x:Name="EnviarFechaATilePrimarioButton"
-                    Content="6.b.2 Enviar hora actual a Tile"
-                    HorizontalAlignment="Stretch"
-                    Click="EnviarFechaATilePrimarioButton_Click"
-                    Margin="0,12,0,0"/>
-
-                <Button
-                    x:Name="EnviarNotificacionConCaducidadButton"
-                    Content="6.b.3 Enviar notificacion con caducidad a Tile"
-                    HorizontalAlignment="Stretch"
-                    Click="EnviarNotificacionConCaducidadButton_Click"
-                    Margin="0,12,0,0"/>
+              
                 
-                <Button
-                    x:Name="CarLiveTileAdaptativoButton"
-                    Content="6.b.4 Cargar Live Tiles Adaptativos"
-                    HorizontalAlignment="Stretch"
-                    Click="CargarLiveTileAdaptativoButton_Click"
-                    Margin="0,12,0,0"/>
+               
                 
-                <Button
-                    x:Name="DesanclarLiveTilesSecundariosButton"
-                    Content="6.b.5 Desanclar Live Tiles Secundarios"
-                    HorizontalAlignment="Stretch"
-                    Click="DesanclarLiveTilesSecundariosButton_Click"
-                    Margin="0,12,0,0"/>
+               
                 
                  
             </StackPanel>

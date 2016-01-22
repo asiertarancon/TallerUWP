@@ -14,25 +14,10 @@
     
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel Margin="100">
-            <Button Content="Selecciona un contacto" Command="{Binding SelectContactCommand}"/>
-            <TextBlock Text="{Binding ContactSelected.DisplayName}"/>
-            <Button Content="Seleccione varios contactos" Command="{Binding ListSelectContactCommand}"/>
-            <ListBox ItemsSource="{Binding ListContactSelected}">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="{Binding SmallDisplayPicture}"/>
-                            <TextBlock Margin="10" Text="{Binding DisplayName}"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-
-            <Button Content="Enviar un mail" Margin="0,10,0,0" Command="{Binding SendMailCommand}" CommandParameter="{Binding ElementName=AsuntoTextBox, Path=Text}"/>
-            <TextBox x:Name="AsuntoTextBox"  Header="Asunto del mail" />
-            <TextBox Header="Cuerpo del mail" Text="{Binding BodyMail, Mode=TwoWay}"/>
-            <Button Content="Ir al Mapa" Command="{Binding GoToMapCommand}" Margin="0,10,0,0"/>
-        </StackPanel>
-        
+           
+            
+            
+           
+        </StackPanel>        
     </Grid>
 </Page>

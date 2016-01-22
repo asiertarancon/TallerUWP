@@ -10,45 +10,14 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ScrollViewer Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <StackPanel Margin="24" >
-                <Button
-                    x:Name="ToastGenericButton"
-                    Content="7a-1 Toast Genérica"
-                    HorizontalAlignment="Stretch"
-                    Click="ToastGenericButton_Click"
-                    Margin="0,12,0,0"/>
-                <Button
-                    x:Name="ToastAlarmButton"
-                    Content="7a-2 Toast Alarma"
-                    HorizontalAlignment="Stretch"
-                    Click="ToastAlarmaButton_Click"
-                    Margin="0,12,0,0"/>
-                <Button
-                    x:Name="ToastLlamadaEntranteButton"
-                    Content="7a-3 Toast Llamada entrante"
-                    HorizontalAlignment="Stretch"
-                    Click="ToastLlamadaEntranteButton_Click"
-                    Margin="0,12,0,0"/>
                 
-                <Button
-                    x:Name="ToastFantasmaButton"
-                    Content="7b Toast fantasma"
-                    HorizontalAlignment="Stretch"
-                    Click="ToastFantasmaButton_Click"
-                    Margin="0,12,0,0"/>
+               
                 
-                <Button
-                    x:Name="ToastConImagenInternetButton"
-                    Content="7c Toast adaptativo con imagen de internet"
-                    HorizontalAlignment="Stretch"
-                    Click="ToastConImagenInternetButton_Click"
-                    Margin="0,12,0,0"/>
+              
                 
-                <Button
-                    x:Name="AbreAplicacionButton"
-                    Content="7d Abre nuestra aplicación con el mensaje que pongamos"
-                    HorizontalAlignment="Stretch"
-                    Click="AbreAplicacionButton_Click"
-                    Margin="0,24,0,0"/>
+               
+                
+               
             </StackPanel>
         </ScrollViewer>
 
