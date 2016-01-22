@@ -20,7 +20,7 @@ namespace Ejemplo.CommandVoice
     /// entrypoint is defined in the Package Manifest (See section uap:Extension in 
     /// AdventureWorks:Package.appxmanifest)
     /// </summary>
-    public sealed class AdventureWorksVoiceCommandService : IBackgroundTask
+    public sealed class TallerVoiceCommandService : IBackgroundTask
     {
         /// <summary>
         /// the service connection is maintained for the lifetime of a cortana session, once a voice command
