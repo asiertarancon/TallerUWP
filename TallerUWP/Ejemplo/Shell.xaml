@@ -29,14 +29,15 @@
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <FontIcon x:Name="Glyph"
-                                              Glyph="{Binding Glyph}"
+                                    <TextBlock x:Name="Glyph"
+                                              Text="{Binding Glyph}"
+                                              FontSize="20"
                                               VerticalAlignment="Center"
                                               HorizontalAlignment="Center"
                                               Foreground="White"
                                               ToolTipService.ToolTip="{Binding Text}" />
                                     <TextBlock Text="{Binding Text}"
-                                               Margin="8 0 0 0"
+                                               Margin="16 0 0 0"
                                                Foreground="White" />
                                 </StackPanel>
                             </DataTemplate>

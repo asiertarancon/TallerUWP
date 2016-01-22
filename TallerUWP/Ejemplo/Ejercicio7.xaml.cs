@@ -23,9 +23,9 @@ namespace Ejemplo
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class Ejercicio7a : Page
+    public sealed partial class Ejercicio7 : Page
     {
-        public Ejercicio7a()
+        public Ejercicio7()
         {
             this.InitializeComponent();
         }

@@ -118,8 +118,8 @@
     <Compile Include="Ejercicio6b.xaml.cs">
       <DependentUpon>Ejercicio6b.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Ejercicio7a.xaml.cs">
-      <DependentUpon>Ejercicio7a.xaml</DependentUpon>
+    <Compile Include="Ejercicio7.xaml.cs">
+      <DependentUpon>Ejercicio7.xaml</DependentUpon>
     </Compile>
     <Compile Include="Live Tiles\TilesHelper.cs" />
     <Compile Include="Live Tiles\ToastHelper.cs" />
@@ -201,7 +201,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Ejercicio7a.xaml">
+    <Page Include="Ejercicio7.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
